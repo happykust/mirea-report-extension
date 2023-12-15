@@ -1,0 +1,15 @@
+{
+  "description": "Fill all students status in journal",
+  "manifest_version": 2,
+  "name": "MJ Fill",
+  "version": "1.0",
+  "icons": {
+    "32": "icons/favicon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://attendance-app.mirea.ru/visiting-logs/*"],
+      "js": ["mje.js"]
+    }
+  ]
+}
