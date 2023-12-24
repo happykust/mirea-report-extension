@@ -1,14 +1,14 @@
 {
-  "description": "Fill all students status in journal",
+  "description": "Calc",
   "manifest_version": 2,
-  "name": "MJ Fill",
+  "name": "MJ CALCCCCCCC",
   "version": "1.0",
   "icons": {
     "32": "icons/favicon.png"
   },
   "content_scripts": [
     {
-      "matches": ["*://attendance-app.mirea.ru/visiting-logs/*"],
+      "matches": ["*://attendance-app.mirea.ru/visiting-logs/*/report/*"],
       "js": ["mje.js"]
     }
   ]
