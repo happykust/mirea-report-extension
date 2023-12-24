@@ -29,8 +29,19 @@ const process_lp_ids = () => {
     let points_from_l = parseFloat(document.getElementById("mje_l").value);
     let points_from_p = parseFloat(document.getElementById("mje_p").value);
     for (let pipirow = 1; pipirow < lp_rows.length - 1; pipirow++) {
-        const t = lp_rows[pipirow].children[0].textContent;
-        lp_ids[pipirow] = t === "ЛК" ? points_from_l : points_from_p
+        switch (lp_rows[pipirow].children[0].textContent) {
+            case "ЛК": {
+                lp_ids[pipirow] = points_from_l;
+                break;
+            }
+            case "ПР": {
+                lp_ids[pipirow] = points_from_p;
+                break
+            }
+            case "ЛАБ": {
+                lp_ids[pipirow] = 0;
+            }
+        }
     }
 }
 
