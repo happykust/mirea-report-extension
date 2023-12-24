@@ -16,7 +16,7 @@ const process_row = (row) => {
     let points = 0;
     for (let pipikaka = 1; pipikaka < row.children.length; pipikaka++) {
         const pipikaka_para = row.children[pipikaka].textContent;
-        if (pipikaka_para === "+") points += lp_ids[pipikaka];
+        if (pipikaka_para === "+" || pipikaka_para === "У") points += lp_ids[pipikaka];
     }
     if (row.children[0].children[0].innerText.includes("=>")) {
         row.children[0].children[0].innerText = row.children[0].children[0].innerText.split(" =>")[0]
